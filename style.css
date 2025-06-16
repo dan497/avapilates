@@ -1,0 +1,380 @@
+/* estilo general */
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #ffffff; /* fondo blanco */
+  color: #000;
+}
+
+
+
+/* barra superior */
+.top-bar {
+  background-color: #f3f3f3;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+
+/* header y nav */
+.main-header {
+  padding: 20px;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-left a,
+.nav-right a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: lowercase;
+}
+.hero {
+  position: relative;
+  height: 90vh;
+  background: url('src/computador.gif') center/cover no-repeat;
+  border-radius: 20px;
+  margin: 10px;
+  overflow: hidden;
+}
+
+/* contenido dentro de la imagen, en esquina inferior derecha */
+.hero-content {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  z-index: 2;
+  color: white;
+  text-align: right;
+}
+
+.hero-content p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.hero-content p strong {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* botón dentro de la imagen */
+.hero-button {
+  margin-top: 12px;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 1.5px solid white;
+  color: white;
+  font-weight: 500;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* navbar dentro del hero */
+.main-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px; /* esto centra y limita el menú */
+  color: white;
+}
+
+
+.nav-left a,
+.nav-right a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: lowercase;
+  color: white;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 20px;  /* antes estaba en 30px */
+  right: 40px;
+  z-index: 2;
+  color: white;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+
+/* texto y botón separados */
+.hero-text p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.hero-text p strong {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.hero-button {
+  margin-top: 20px;  /* antes estaba en 40px */
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 1.5px solid white;
+  color: white;
+  font-weight: 500;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+
+.hero-button:hover {
+  background-color: white;
+  color: black;
+}
+
+.product-slider {
+  background-color: transparent;
+  margin: 10px;
+  padding: 5px 0; /* top/bottom: 60px, left/right: 10px */
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+
+.product-card {
+  background-color: #f4f4f4;  /* gris claro tipo burbuja */
+  border-radius: 20px;
+  padding: 20px;
+  flex: 0 0 80%;
+  scroll-snap-align: start;
+  min-width: 300px;
+  max-width: 500px;
+  box-shadow: none;
+}
+
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.product-card h2 {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #555; /* mismo gris que el resto del texto */
+  font-weight: 600;
+}
+
+
+.product-card h3 {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+}
+
+.product-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 10px 0;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #555;
+}
+
+.slider-spacer {
+  flex: 0 0 10px; /* mismo ancho que el padding izquierdo */
+}
+
+.split-section {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  margin: 40px 10px;
+  overflow: hidden;
+}
+
+.split-text {
+  flex: 1;
+  padding: 40px;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.split-text h2 {
+  font-size: 1.8rem;
+  color: #555;
+  margin-bottom: 20px;
+  text-transform: lowercase;
+  font-weight: 600;
+}
+
+.split-text p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+  max-width: 90%;
+}
+
+.split-image {
+  flex: 1;
+  min-height: 400px;
+}
+
+.split-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* botón tipo outline como Rhode */
+.outline-button {
+  padding: 10px 25px;
+  background-color: transparent;
+  border: 1.5px solid #555;
+  border-radius: 999px;
+  color: #555;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.outline-button:hover {
+  background-color: #555;
+  color: white;
+}
+
+.split-text {
+  flex: 1;
+  padding: 5px;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* esto empuja el botón hacia abajo */
+}
+
+.split-text-content {
+  /* nuevo div para agrupar texto */
+}
+
+.outline-button {
+  align-self: flex-start; /* alinea el botón a la izquierda */
+  padding: 10px 25px;
+  background-color: transparent;
+  border: 1.5px solid #555;
+  border-radius: 999px;
+  color: #555;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.outline-button:hover {
+  background-color: #555;
+  color: white;
+}
+
+.split-text {
+  flex: 1;
+  padding: 40px;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: flex-end;     /* lleva el contenido al fondo */
+  align-items: flex-start;       /* alinea a la izquierda */
+}
+
+.split-content {
+  max-width: 500px;
+}
+
+.split-content h2 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: #555;
+}
+
+.split-content p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.outline-button {
+  padding: 10px 25px;
+  background-color: transparent;
+  border: 1.5px solid #555;
+  border-radius: 999px;
+  color: #555;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.outline-button:hover {
+  background-color: #555;
+  color: white;
+}
+
