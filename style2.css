@@ -1,0 +1,1028 @@
+body {
+  margin: 0;
+  padding: 0 24px;
+  /* espaciado blanco a los lados */
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #ffffff;
+}
+
+/* Contenedor central */
+.container {
+  max-width: 1200px;
+  margin: 0 auto 16px auto;
+  /* solo margen inferior */
+  padding: 0;
+}
+
+.container:first-of-type {
+  margin-top: 20px;
+  /* solo el primero tiene margen superior */
+}
+
+/* Free shipping */
+.top-bar {
+  background-color: #f2f0ed;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  border-radius: 10px;
+  color: #666666;
+  /* gris medio */
+}
+
+
+/* Hero gif */
+.hero {
+  position: relative;
+  /* necesario para posicionar elementos dentro */
+  background-image: url('src/pilates-c.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  border-radius: 10px;
+  overflow: hidden;
+  /* para que el botón no se salga */
+}
+
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  /* solo arriba y abajo */
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+
+
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-center {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo {
+  height: 40px;
+  object-fit: contain;
+}
+
+/* estilo general de los links */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  text-align: right;
+  color: white;
+  max-width: 300px;
+  padding-bottom: 10px;
+}
+
+.hero-text p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hero-text h1 {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 8px 0;
+}
+
+.hero-text em {
+  font-style: italic;
+}
+
+.hero-text button {
+  margin-top: 10px;
+  padding: 8px 20px;
+  border: 1.5px solid white;
+  background: transparent;
+  color: white;
+  font-size: 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.product-slider {
+  position: relative;
+  background-color: white;
+  /* fondo blanco como toda la página */
+  padding: 20px 0;
+  border-radius: 10px;
+}
+
+/* contenedor scrollable */
+.product-list {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 0 0 20px 0;
+  /* quitamos padding-left */
+}
+
+
+/* cada producto es un "contenedor" individual */
+.product-card {
+  min-width: 280px;
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  padding: 20px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* resto igual */
+.product-card h3 {
+  font-size: 30px;
+  font-weight: 800;
+  color: #444;
+  text-align: left;
+  width: 100%;
+  margin: 0 0 12px 0;
+}
+
+.product-card img {
+  width: 180px;
+  margin-bottom: 16px;
+}
+
+/* sección de información dentro del producto */
+.product-card .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  font-size: 13px;
+  color: #444;
+  /* mismo color para ambos */
+  margin-top: 16px;
+}
+
+/* nombre + descripción a la izquierda */
+.info-left {
+  text-align: left;
+}
+
+.info-left strong {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: #444;
+  /* mismo color */
+}
+
+.info-left p {
+  margin: 0;
+  font-weight: normal;
+  color: #444;
+  /* mismo color */
+}
+
+/* precio a la derecha */
+.info-right {
+  font-weight: bold;
+  white-space: nowrap;
+  padding-top: 2px;
+  color: #444;
+}
+
+
+
+.product-card .info span {
+  float: right;
+}
+
+.product-card:first-child {
+  margin-left: 0;
+}
+
+
+/* botones de navegación */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  border: none;
+  font-size: 28px;
+  padding: 10px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+.slider-btn.left {
+  left: 0;
+  margin-left: -20px;
+}
+
+.slider-btn.right {
+  right: 0;
+  margin-right: -20px;
+}
+
+.split-section {
+  display: flex;
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-wrap: wrap;
+  height: 400px;
+  /* fijo o auto, ajusta según gusto */
+}
+
+.split-text {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.split-text h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: #444;
+}
+
+.split-text p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.split-text button {
+  padding: 10px 20px;
+  border: 1.5px solid #444;
+  background: transparent;
+  color: #444;
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+
+}
+
+.split-image {
+  flex: 1;
+  min-width: 300px;
+  height: 100%;
+}
+
+.split-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+  /* elimina bordes si había */
+}
+
+.split-button {
+  margin-top: 20px;
+  padding: 8px 20px;
+  border: 1.5px solid #333;
+  background: transparent;
+  color: #333;
+  font-size: 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  white-space: nowrap;
+  display: inline-block;
+  /* evita que se estire */
+}
+
+.split-text button {
+  align-self: flex-start;
+  /* esto impide que se estire */
+}
+
+.full-image-text {
+  position: relative;
+  height: 500px;
+  background-image: url('src/pilates3.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  color: white;
+}
+
+.overlay-content {
+  padding: 40px;
+  max-width: 600px;
+}
+
+
+.overlay-content h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.overlay-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.overlay-content button {
+  padding: 10px 24px;
+  border: 1.5px solid white;
+  background: transparent;
+  color: white;
+  font-size: 12px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.footer {
+  background-color: #f4f4f4;
+  padding: 60px 0 30px 0;
+  font-size: 14px;
+  color: #444;
+  font-family: Helvetica, sans-serif;
+  border-top: 1px solid #ccc;
+  /* línea superior como rhode */
+  margin-top: 60px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  gap: 40px;
+}
+
+.footer-newsletter {
+  flex: 1 1 280px;
+  max-width: 320px;
+}
+
+.footer-newsletter p {
+  margin: 0 0 12px 0;
+  line-height: 1.6;
+}
+
+.newsletter-form {
+  display: flex;
+  margin: 16px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px #ccc;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.newsletter-form button {
+  padding: 12px 20px;
+  border: none;
+  background-color: white;
+  font-weight: bold;
+  font-family: Helvetica, sans-serif;
+  cursor: pointer;
+  border-left: 1px solid #ccc;
+}
+
+.privacy-note {
+  font-size: 12px;
+  color: #666;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+.privacy-note a {
+  text-decoration: underline;
+  color: #666;
+}
+
+.footer-columns {
+  display: flex;
+  flex: 2 1 600px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-columns h4 {
+  margin-bottom: 14px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.footer-columns ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-columns li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.footer-columns a {
+  color: #444;
+  text-decoration: none;
+}
+
+.footer-columns a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+  padding: 20px 24px 0 24px;
+  font-size: 12px;
+  color: #999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ccc;
+}
+
+
+.footer-wrapper {
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  margin: 40px auto;
+  padding: 40px 0;
+  max-width: 1280px;
+}
+
+
+
+.sticky-navbar .navbar.sticky .nav-center {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.hero-shop {
+  height: 380px; /* o el alto que prefieras */
+  position: relative;
+  background-image: url('src/pilates-c.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* Texto centrado */
+.hero-shop-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.hero-shop-text h1 {
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.hero-shop-text strong {
+  font-weight: bold;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1.5px solid #444;
+  background-color: white;
+  color: #444;
+  border-radius: 40px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: 'Helvetica Neue', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-btn:hover {
+  background-color: #444;
+  color: white;
+}
+
+.filter-btn.active {
+  background-color: #444;
+  color: white;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* exactamente 2 columnas */
+  gap: 32px;
+  padding: 40px 0;
+}
+@media (max-width: 700px) {
+  .product-grid {
+    grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+  }
+}
+
+.product-box {
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-box h3 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #444;
+  margin-bottom: 12px;
+  text-transform: lowercase;
+}
+
+.product-box img {
+  width: 100%;
+  max-width: 180px;
+  margin: 0 auto 24px auto;
+}
+
+.info-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 14px;
+  color: #444;
+}
+
+.info-box strong {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.info-box p {
+  margin: 0;
+  font-weight: normal;
+  color: #444;
+}
+
+.info-right {
+  font-weight: bold;
+  white-space: nowrap;
+  color: #444;
+}
+
+.day-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 40px 0;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 60px;
+}
+
+.day-date {
+  font-size: 12px;
+  font-weight: normal;
+  color: #777;
+  margin-bottom: 4px;
+}
+
+.arrow-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #666;
+  padding: 0 10px;
+}
+
+.day-box {
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 60px;
+}
+
+.day-date {
+  font-size: 12px;
+  font-weight: normal;
+  color: #777;
+  margin-bottom: 4px;
+}
+
+.day-name {
+  text-transform: uppercase;
+}
+
+.arrow-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #666;
+  padding: 0 10px;
+}
+
+.booking-section {
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.booking-card {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.booking-time,
+.booking-info {
+  color: #444;
+}
+
+.booking-time strong {
+  font-size: 18px;
+  color: #222;
+}
+
+.booking-time p,
+.booking-info p {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.booking-info strong {
+  font-size: 18px;
+  color: #222;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.booking-action {
+  text-align: center;
+  color: #444;
+}
+
+.booking-action button {
+  padding: 10px 24px;
+  border-radius: 40px;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.waitlist-btn {
+  background-color: #1f1c3f;
+  color: white;
+}
+
+.book-btn {
+  background-color: #1f1c3f;
+  color: white;
+}
+
+.booking-action span {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #444;
+}
+
+.booking-section {
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.booking-card {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.booking-time,
+.booking-info {
+  color: #444;
+}
+
+.booking-time strong {
+  font-size: 18px;
+  color: #222;
+}
+
+.booking-time p,
+.booking-info p {
+  font-size: 14px;
+  margin-top: 4px;
+  color: #444;
+}
+
+.booking-info strong {
+  font-size: 18px;
+  color: #222;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.booking-action {
+  text-align: center;
+  color: #444;
+  min-width: 140px; /* ancho mínimo fijo para todos los botones */
+}
+
+.booking-btn {
+  padding: 10px 24px;
+  border-radius: 40px;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #444 !important; /* fuerza el fondo gris oscuro */
+  color: white !important;           /* fuerza el texto blanco */
+  width: 100%;
+  max-width: 140px;
+  appearance: none; /* elimina estilo por defecto de algunos navegadores */
+  -webkit-appearance: none; /* Safari */
+}
+
+.booking-action span {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #444;
+}
+
+/* navbar especial para login */
+.login-navbar {
+  background-color: #f4f4f4;
+  border-bottom: none;
+  border-radius: 20px 20px 0 0;
+  padding: 30px 40px;
+}
+
+.login-navbar a {
+  color: #444 !important; /* texto gris oscuro para coherencia */
+}
+
+/* login section dividida */
+.login-section {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+  height: 500px;
+}
+
+/* imagen a la izquierda */
+.login-image {
+  flex: 1;
+  min-width: 300px;
+  background-image: url('src/pilates-c.jpg'); /* cámbialo si usas otra imagen */
+  background-size: cover;
+  background-position: center;
+}
+
+/* formulario a la derecha */
+.login-form {
+  flex: 1;
+  min-width: 300px;
+  background-color: #f4f4f4;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: auto; /* ✅ permite que el contenido crezca */
+}
+
+
+.login-form h1 {
+  font-size: 28px;
+  font-weight: 400;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.login-form h1 strong {
+  font-weight: 800;
+}
+
+.login-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-form input {
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  font-family: Helvetica, sans-serif;
+}
+
+.login-form button {
+  padding: 12px 16px;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: Helvetica, sans-serif;
+}
+
+.login-note {
+  font-size: 12px;
+  margin-top: 10px;
+  color: #666;
+  text-align: center;
+}
+
+.login-note a {
+  color: #666;
+  text-decoration: underline;
+}
+
+.login-form h1 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #444;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* input estilo limpio */
+.login-form input {
+  padding: 16px;
+  border-radius: 16px;
+  border: none;
+  font-size: 16px;
+  background-color: white;
+  font-family: Helvetica, sans-serif;
+  box-shadow: 0 0 0 1px #ddd;
+  transition: box-shadow 0.3s;
+}
+
+.login-form input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #aaa;
+}
+
+/* botón outline */
+.outline-btn {
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #444;
+  background-color: transparent;
+  color: #444;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.outline-btn:hover {
+  background-color: #444;
+  color: white;
+}
+
+/* enlaces sutiles */
+.login-note {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #444;
+  text-align: center;
+}
+
+.login-note a {
+  color: #444;
+  text-decoration: underline;
+}
+
+.login-section {
+  height: auto;
+  min-height: 500px;
+}
